@@ -1,7 +1,7 @@
 #!/bin/bash
 
-LOGFILE="/home/ubuntu/reports/health_report_$(date +%F).log"
-mkdir -p /home/ubuntu/reports
+LOGFILE="/home/ubuntu/shellscripts/system-health-report/reports/health_report_$(date +%F).log"
+mkdir -p /home/ubuntu/shellscripts/system-health-report/reports
 exec > "$LOGFILE" 2>&1
 
 
