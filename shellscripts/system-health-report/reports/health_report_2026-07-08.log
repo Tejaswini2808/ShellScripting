@@ -6,25 +6,25 @@ Hostname		: ip-172-31-34-142
 IP Address		: 172.31.34.142 
 Operating System	: GNU/Linux
 Kernel Version		: 7.0.0-1008-aws
-Current Date		: Wed Jul  8 13:35:09 UTC 2026
-Uptime			: up 2 hours, 57 minutes
+Current Date		: Wed Jul  8 13:47:17 UTC 2026
+Uptime			: up 3 hours, 9 minutes
 
 ========== CPU Usage ==========
-%Cpu(s):  0.0 us,  4.8 sy,  0.0 ni, 95.2 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
     PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
      21 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0
      22 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1
 
 ========== Memory Usage ==========
                total        used        free      shared  buff/cache   available
-Mem:           1.9Gi       446Mi       746Mi       2.7Mi       919Mi       1.4Gi
+Mem:           1.9Gi       456Mi       722Mi       2.7Mi       933Mi       1.4Gi
 Swap:             0B          0B          0B
 
 ========== Disk Usage ==========
 Filesystem       Size  Used Avail Use% Mounted on
 /dev/root        6.7G  2.8G  3.8G  43% /
 tmpfs            953M     0  953M   0% /dev/shm
-tmpfs            382M  892K  381M   1% /run
+tmpfs            382M  896K  381M   1% /run
 efivarfs         128K  3.3K  120K   3% /sys/firmware/efi/efivars
 tmpfs            953M     0  953M   0% /tmp
 none             1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
@@ -41,16 +41,16 @@ tmpfs            191M  8.0K  191M   1% /run/user/1000
     612 snapd            2.0
     694 unattended-upgr  1.6
     603 networkd-dispat  1.5
+   8155 packagekitd      1.1
     957 amazon-ssm-agen  1.0
-   5993 git-remote-http  0.9
 
 ========== Top 5 CPU Consuming Processes ==========
     PID COMMAND         %CPU
    4262 sshd-session     0.0
       1 systemd          0.0
+   8155 packagekitd      0.0
    4263 bash             0.0
    5755 kworker/1:2-eve  0.0
-   4984 kworker/0:0-cgr  0.0
 
 ========== Logged-in Users ==========
 
@@ -65,11 +65,11 @@ tmpfs            191M  8.0K  191M   1% /run/user/1000
   ModemManager.service                           loaded active running Modem Manager
   multipathd.service                             loaded active running Device-Mapper Multipath Device Controller
   networkd-dispatcher.service                    loaded active running Dispatcher daemon for systemd-networkd
+  packagekit.service                             loaded active running PackageKit Daemon
   polkit.service                                 loaded active running Authorization Manager
   rsyslog.service                                loaded active running System Logging Service
   serial-getty@ttyS0.service                     loaded active running Serial Getty on ttyS0
   snap.amazon-ssm-agent.amazon-ssm-agent.service loaded active running Service for snap application amazon-ssm-agent.amazon-ssm-agent
-  snapd.service                                  loaded active running Snap Daemon
 
 ========== Disk Space Alert ==========
 Disk Usage is normal (43%)
