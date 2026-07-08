@@ -1,0 +1,301 @@
+🖥️ Linux System Health Report Automation
+==========================================
+
+A Bash script that automates system health monitoring by collecting important Linux server metrics such as CPU, memory, disk usage, uptime, running services, logged-in users, and top resource-consuming processes.
+
+The script generates a daily health report, saves it to a log file, and can be scheduled using Cron to run automatically every day.
+
+---
+
+# Project Overview
+
+Monitoring server health is one of the routine operational tasks performed by DevOps and SRE engineers.
+This project automates the collection of system health information using Shell Scripting and Linux utilities.
+
+The generated report can be used for:
+
+- Daily server health checks
+- Preventive maintenance
+- Capacity planning
+- Troubleshooting
+- Infrastructure monitoring
+- Operations reporting
+
+---
+
+# Features
+
+✅ Collects Hostname
+✅ Displays Server IP Address
+✅ Displays Operating System
+✅ Displays Kernel Version
+✅ Displays Current Date & Time
+✅ Displays System Uptime
+✅ Displays CPU Usage
+✅ Displays Memory Usage
+✅ Displays Disk Usage
+✅ Displays Top 5 CPU-consuming Processes
+✅ Displays Top 5 Memory-consuming Processes
+✅ Displays Logged-in Users
+✅ Displays Running Services
+✅ Checks Disk Usage Threshold
+✅ Checks Memory Usage Threshold
+✅ Generates Daily Health Report
+✅ Supports Cron Scheduling
+
+---
+
+# Technologies Used
+
+- Linux
+- Bash Shell Scripting
+- Cron
+- awk
+- grep
+- ps
+- free
+- df
+- top
+- hostname
+- systemctl
+
+---
+
+# Project Structure
+
+```
+
+system-health-report/
+
+│
+
+├── health_report.sh
+
+├── README.md
+
+└── reports/
+
+      ├── health_report_2026-07-08.log
+
+      ├── health_report_2026-07-09.log
+
+```
+
+---
+
+# Prerequisites
+
+- Ubuntu / Linux Server
+- Bash
+- Cron Service
+- sudo privileges
+
+---
+
+# Script Workflow
+
+```
+
+Start
+   │
+   ▼
+Collect Server Information
+   │
+   ▼
+Collect CPU Usage
+   │
+   ▼
+Collect Memory Usage
+   │
+   ▼
+Collect Disk Usage
+   │
+   ▼
+Collect Running Services
+   │
+   ▼
+Collect Logged-in Users
+   │
+   ▼
+Check Usage Thresholds
+   │
+   ▼
+Generate Health Report
+   │
+   ▼
+Save Report to File
+   │
+   ▼
+End
+
+```
+
+---
+
+# How to Run
+
+Give execute permission
+
+```bash
+
+chmod +x health_report.sh
+
+```
+
+Run the script
+
+```bash
+
+./health_report.sh
+
+```
+
+---
+
+# Sample Output
+
+```
+
+========================================
+SYSTEM HEALTH REPORT
+========================================
+Hostname        : ip-172-31-45-90
+IP Address      : 172.31.45.90
+Kernel Version  : 6.8.0
+Date            : Tue Jul 08
+CPU Usage
+Memory Usage
+Disk Usage
+Top CPU Processes
+Top Memory Processes
+Logged in Users
+Running Services
+Disk Usage Status : Normal
+Memory Usage Status : Normal
+
+Report Generated Successfully
+
+```
+
+---
+
+# Scheduling Using Cron
+
+Open Cron
+
+```bash
+
+crontab -e
+
+```
+
+Schedule the script every day at **1 PM**
+
+```cron
+
+0 13 * * * /home/ubuntu/shellscripts/health_report.sh
+
+```
+
+Verify Cron
+
+```bash
+
+crontab -l
+
+```
+
+---
+
+# Log Files
+
+The script generates one log file per day.
+
+Example
+
+```
+reports/
+
+health_report_2026-07-08.log
+health_report_2026-07-09.log
+health_report_2026-07-10.log
+
+```
+
+---
+
+# Commands Used
+
+| Command | Purpose |
+
+|----------|----------|
+
+| hostname | Server Name |
+| hostname -I | IP Address |
+| uname | Kernel Information |
+| date | Current Date |
+| uptime | System Uptime |
+| free | Memory Usage |
+| df | Disk Usage |
+| top | CPU Usage |
+| ps | Running Processes |
+| systemctl | Running Services |
+| who | Logged-in Users |
+| awk | Text Processing |
+| grep | Pattern Matching |
+
+---
+
+# Future Improvements
+
+- Email notification when disk usage exceeds threshold
+- Slack integration
+- Microsoft Teams alerts
+- HTML Report Generation
+- Log Rotation
+- Automatic Cleanup of Old Reports
+- AWS CloudWatch Integration
+- Prometheus Node Exporter Integration
+- Grafana Dashboard
+- Jenkins Pipeline Integration
+- Dockerize the Script
+
+---
+
+# Learning Outcomes
+
+This project demonstrates practical DevOps skills in:
+
+- Linux Administration
+- Shell Scripting
+- Process Monitoring
+- System Monitoring
+- Log Management
+- Cron Job Automation
+- Infrastructure Operations
+- Production Support
+- Automation
+
+---
+
+# Author
+
+**Tejaswini Lingala**
+
+DevOps | SRE Engineer
+
+Skills:
+
+- Linux
+- Shell Scripting
+- Git
+- GitHub
+- Docker
+- Kubernetes
+- Jenkins
+- AWS
+- Prometheus
+- Grafana
+- ArgoCD
+- Terraform
+ 
