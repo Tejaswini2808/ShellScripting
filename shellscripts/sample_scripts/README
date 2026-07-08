@@ -1,0 +1,88 @@
+📜 Sample Shell Scripts
+This folder contains beginner to intermediate Bash shell scripts covering common Linux administration and DevOps automation tasks.
+These scripts demonstrate scripting concepts that are frequently used in production environments and DevOps interviews.
+---
+## Scripts Included
+### 1. hello.sh
+Prints a simple Hello World message.
+Concepts:
+- echo
+- Bash Script Structure
+---
+### 2. create_user.sh
+Creates a new Linux user.
+Concepts:
+- useradd
+- read
+- if-else
+- User Management
+---
+### 3. delete_user.sh
+Deletes an existing Linux user.
+Concepts:
+- userdel
+- User Validation
+- Conditional Statements
+---
+### 4. backup.sh
+Creates a compressed backup of a directory.
+Concepts:
+- tar
+- gzip
+- File Backup
+---
+### 5. disk_usage.sh
+Checks disk utilization and warns if usage exceeds the threshold.
+Concepts:
+- df
+- awk
+- Shell Variables
+- if Condition
+---
+### 6. delete_old_logs.sh
+Deletes log files older than a specified number of days.
+Concepts:
+- find
+- -mtime
+- File Cleanup
+---
+### 7. ping_servers.sh
+Checks whether multiple servers are reachable.
+Concepts:
+- for Loop
+- ping
+- Exit Status
+---
+### 8. health_check.sh
+Displays basic system information including memory, CPU, and disk usage.
+Concepts:
+- free
+- top
+- df
+- uptime
+---
+### 9. aws_resource_tracker.sh
+Lists AWS resources using AWS CLI.
+Concepts:
+- AWS CLI
+- EC2
+- S3
+- IAM
+- Automation
+---
+## Skills Practiced
+- Bash Scripting
+- Linux Administration
+- Automation
+- AWS CLI
+- File Management
+- User Management
+- System Monitoring
+---
+## Requirements
+- Linux
+- Bash
+- AWS CLI (for AWS scripts)
+---
+## Learning Outcome
+These scripts build a strong foundation in Linux automation and prepare engineers for DevOps and SRE roles.
