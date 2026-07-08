@@ -1,6 +1,9 @@
 📜 Shell Scripting Collection
+
 This directory contains a collection of Bash shell scripts that automate common Linux administration and DevOps tasks.
+
 These scripts were created as hands-on practice for Linux automation and demonstrate real-world DevOps use cases.
+
 ---
 ## Project Structure
 ```
