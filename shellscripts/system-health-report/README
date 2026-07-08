@@ -187,13 +187,14 @@ Open Cron
 
 crontab -e
 
+
 ```
 
 Schedule the script every day at **1 PM**
 
 ```cron
 
-0 13 * * * /home/ubuntu/shellscripts/health_report.sh
+0 13 * * * /home/ubuntu/ShellScripting/shellscripts/system-health-report/health_report.sh
 
 ```
 
