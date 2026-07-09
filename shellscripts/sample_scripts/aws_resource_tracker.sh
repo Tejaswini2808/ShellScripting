@@ -2,27 +2,91 @@
 
 #################################################
 # Author: Tejaswini
-# Date: July 3rd
-#
-# Version: v1
-# 
-# This Script will report the AWS resource usage
+# Description: List of AWS resources in configured account
+# Prerequisite:
+# 	- AWS CLI intalled
+# 	- AWS CLI configured
 #################################################
 
-set -x
+echo "=========================================================================="
+echo "				AWS RESOURCE TRACKER				"
+echo "=========================================================================="
 
-# AWS S3
-echo 'List of S3 Buckets'
-aws s3 ls  
+echo
+echo "----------Current AWS Region----------"
+aws configure get region
 
-# AWS EC2
-echo 'List of EC2 instances'
-aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId' 
+echo
+echo "--------------------------------------"
+echo "		EC2 Instances	            "
+echo "--------------------------------------"
 
-# AWS Lambda
-echo 'List of Lambda Functions'
-aws lambda list-functions
+aws ec2 describe-instances \
+	--query "Reservations[*].Instances[*].[InstanceId,State.Name,InstanceType,PublicIpAddress]" \
+	--output table
 
-# AWS IAM users
-echo 'List of IAM Users'
-aws iam list-users 
+echo
+echo "-------------------------------------"
+echo "		S3 Buckets		   "
+echo "-------------------------------------"
+
+aws s3 ls
+
+echo
+echo "-------------------------------------"
+echo "		Lambda Functions	   "
+echo "-------------------------------------"
+
+aws lambda list-functions \
+	--query "Functions[*].[FunctionName]" \
+	--output table
+
+echo
+echo "------------------------------------"
+echo "		RDS Databases		  "
+echo "------------------------------------"
+
+aws rds describe-db-instances \
+	--query "DBInstances[*].[DBInstanceIdentifier,Engine,DBInstanceStatus]" \
+	--output table
+
+echo
+echo "-------------------------------------"
+echo "		EBS Volumes		   "
+echo "-------------------------------------"
+
+aws ec2 describe-volumes \
+	--query "Volumes[*].[VolumeId,Size,State]" \
+	--output table
+
+echo
+echo "------------------------------------"
+echo "		  VPCs			  "
+echo "------------------------------------"
+
+aws ec2 describe-vpcs \
+	--query "Vpcs[*].[VpcId,CidrBlock]" \
+	--output table
+
+echo
+echo "------------------------------------"
+echo "           Subnets		  "
+echo "------------------------------------"
+
+aws ec2 describe-subnets \
+	--query "Subnets[*].[SubnetId,CidrBlock]" \
+	--output table
+
+echo 
+echo "------------------------------------"
+echo "		Security Groups           "
+echo "------------------------------------"
+
+aws ec2 describe-security-groups \
+	--query "SecurityGroups[*].[GroupName,GroupId]" \
+	--output table
+
+echo
+echo "================================================"
+echo "  AWS Resource Tracking Completed Successfully  "
+echo "================================================"
