@@ -1,0 +1,306 @@
+📜 DevOps Shell Scripts Collection
+A collection of production-oriented Bash shell scripts designed to automate common Linux system administration, DevOps, SRE, and cloud operational tasks.
+These scripts demonstrate real-world automation techniques used by DevOps Engineers to improve system reliability, reduce manual effort, and automate routine operational activities.
+---
+# 🚀 Technologies Used
+- Bash Shell Scripting
+- Linux Administration
+- AWS CLI
+- Docker
+- Kubernetes
+- Jenkins
+- Cron Jobs
+- Systemd
+- OpenSSL
+- Networking Utilities
+- Linux Monitoring Commands
+---
+# 📂 Project Structure
+```
+sample_scripts/
+├── 01_aws_resource_tracker.sh
+├── 02_backup_rotation.sh
+├── 03_cpu_memory_alert.sh
+├── 04_docker_cleanup.sh
+├── 05_service_monitor.sh
+├── 06_kubernetes_pod_checker.sh
+├── 07_log_monitor.sh
+├── 08_ssl_certificate_checker.sh
+├── 09_jenkins_backup.sh
+├── 10_process_monitor.sh
+├── 11_user_audit.sh
+├── 12_disk_cleanup.sh
+├── 13_nginx_health_check.sh
+├── 14_cron_job_validator.sh
+├── 15_system_information.sh
+```
+---
+# 📌 Scripts Included
+## 1️⃣ AWS Resource Tracker
+Lists AWS resources using AWS CLI.
+### Features
+- EC2 Instances
+- S3 Buckets
+- IAM Users
+- Lambda Functions
+- RDS Databases
+- VPCs
+- Security Groups
+**Skills**
+AWS CLI • Bash • Cloud Automation
+---
+## 2️⃣ Backup Rotation
+Automates Linux directory backups.
+### Features
+- Creates compressed backups
+- Timestamped archive
+- Automatic backup rotation
+- Deletes old backups
+- Retention policy
+**Skills**
+Linux • tar • Backup Automation
+---
+## 3️⃣ CPU & Memory Alert
+Monitors server resource utilization.
+### Features
+- CPU Monitoring
+- Memory Monitoring
+- Threshold-based alerts
+- Log generation
+- Exit status for monitoring tools
+**Skills**
+Linux Monitoring • Bash • Automation
+---
+## 4️⃣ Docker Cleanup
+Maintains Docker hosts by removing unused resources.
+### Features
+- Remove stopped containers
+- Remove dangling images
+- Remove unused images
+- Remove volumes
+- Remove networks
+- Remove build cache
+**Skills**
+Docker • DevOps • Infrastructure Maintenance
+---
+## 5️⃣ Service Monitor
+Monitors Linux services and performs automatic recovery.
+### Features
+- Check service status
+- Restart stopped services
+- Logging
+- Health report
+**Skills**
+Systemd • Linux • Automation
+---
+## 6️⃣ Kubernetes Pod Checker
+Checks Kubernetes cluster health.
+### Features
+- Detect unhealthy pods
+- CrashLoopBackOff detection
+- Pending Pods
+- ImagePullBackOff
+- Cluster validation
+- Logging
+**Skills**
+Kubernetes • kubectl • Monitoring
+---
+## 7️⃣ Log Monitor
+Scans application logs for critical issues.
+### Features
+- Detect ERROR
+- Detect WARNING
+- Detect CRITICAL
+- Detect EXCEPTION
+- Generate reports
+**Skills**
+Linux Logs • grep • Troubleshooting
+---
+## 8️⃣ SSL Certificate Checker
+Monitors SSL certificate expiry.
+### Features
+- Check certificate validity
+- Calculate remaining days
+- Expiry alerts
+- Logging
+**Skills**
+OpenSSL • Networking • Security
+---
+## 9️⃣ Jenkins Backup
+Automates Jenkins backup.
+### Features
+- Backup Jenkins Home
+- Compress backup
+- Rotate backups
+- Logging
+- Scheduled backups
+**Skills**
+Jenkins • CI/CD • Backup Automation
+---
+## 🔟 Process Monitor
+Monitors critical Linux processes.
+### Features
+- Process validation
+- Automatic recovery
+- PID detection
+- Logging
+**Skills**
+Linux • Process Management
+---
+## 1️⃣1️⃣ User Audit
+Performs Linux security auditing.
+### Features
+- List users
+- Sudo users
+- UID 0 accounts
+- Last login
+- Logged-in users
+- Security report
+**Skills**
+Linux Security • User Administration
+---
+## 1️⃣2️⃣ Disk Cleanup
+Maintains server storage.
+### Features
+- Delete old log files
+- Clean temporary files
+- Package cache cleanup
+- Disk utilization report
+**Skills**
+Linux Administration • Storage Management
+---
+## 1️⃣3️⃣ Nginx Health Check
+Validates web server health.
+### Features
+- Service monitoring
+- HTTP response validation
+- Automatic restart
+- Health verification
+**Skills**
+Nginx • Linux • Monitoring
+---
+## 1️⃣4️⃣ Cron Job Validator
+Audits Cron configuration.
+### Features
+- Validate Cron Service
+- List Cron Jobs
+- Detect duplicate jobs
+- Generate report
+**Skills**
+Cron • Linux Administration
+---
+## 1️⃣5️⃣ System Information Report
+Generates a complete Linux system inventory.
+### Features
+- OS Information
+- Kernel Details
+- CPU Information
+- Memory Usage
+- Disk Usage
+- Mounted Filesystems
+- Network Interfaces
+- Running Services
+- Open Ports
+- Uptime
+**Skills**
+Linux Administration • Inventory Automation
+---
+# 🎯 Key Skills Demonstrated
+- Linux Administration
+- Bash Shell Scripting
+- Automation
+- Monitoring
+- AWS CLI
+- Docker
+- Kubernetes
+- Jenkins
+- Security Auditing
+- Networking
+- Process Management
+- Backup & Recovery
+- Cron Scheduling
+- Infrastructure Maintenance
+- Log Analysis
+---
+# 💼 Real-World DevOps Use Cases
+These scripts can be integrated with:
+- Jenkins Pipelines
+- GitHub Actions
+- AWS EC2
+- Kubernetes Clusters
+- Docker Hosts
+- Cron Jobs
+- Nagios
+- Zabbix
+- Prometheus
+- Grafana
+- AWS CloudWatch
+---
+# 📈 Future Enhancements
+- Slack Notifications
+- Microsoft Teams Alerts
+- Email Notifications
+- HTML Report Generation
+- Prometheus Metrics
+- CloudWatch Integration
+- S3 Backup Storage
+- Terraform Integration
+- Ansible Automation
+- JSON/CSV Report Export
+---
+# 🛠️ Prerequisites
+- Ubuntu/Linux
+- Bash
+- AWS CLI (for AWS scripts)
+- Docker
+- Kubernetes (kubectl)
+- Jenkins
+- OpenSSL
+- sudo privileges
+---
+# ▶️ Usage
+Clone the repository
+```bash
+git clone https://github.com/Tejaswini2808/ShellScripting.git
+```
+Navigate to the scripts directory
+```bash
+cd shellscripts/sample_scripts
+```
+Give execute permission
+```bash
+chmod +x *.sh
+```
+Run any script
+```bash
+./cpu_memory_alert.sh
+```
+---
+# 📚 Learning Outcomes
+This repository demonstrates practical automation skills expected from a DevOps/SRE Engineer, including:
+- Linux automation
+- Infrastructure monitoring
+- CI/CD support
+- Cloud resource management
+- Security auditing
+- Operational scripting
+- Production maintenance
+- Infrastructure reliability
+---
+# 👩‍💻 Author
+**Tejaswini Lingala**
+DevOps | SRE Engineer
+## Skills
+- Linux
+- Shell Scripting
+- Git
+- GitHub
+- AWS
+- Docker
+- Kubernetes
+- Jenkins
+- Terraform
+- Ansible
+- Prometheus
+- Grafana
+- ArgoCD
