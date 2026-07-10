@@ -61,14 +61,6 @@ Concepts:
 - df
 - uptime
 ---
-### 9. aws_resource_tracker.sh
-Lists AWS resources using AWS CLI.
-Concepts:
-- AWS CLI
-- EC2
-- S3
-- IAM
-- Automation
 ---
 ## Skills Practiced
 - Bash Scripting
