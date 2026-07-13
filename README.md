@@ -76,11 +76,6 @@ Features include:
 - Email Alerts
 - Slack Notifications
 - HTML Reports
-- Docker Support
-- Jenkins Integration
-- AWS CloudWatch Integration
-- Prometheus Metrics
-- Grafana Dashboard
 ---
 ## Author
 **Tejaswini Lingala**
