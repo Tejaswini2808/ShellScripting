@@ -241,12 +241,6 @@ These scripts can be integrated with:
 - Microsoft Teams Alerts
 - Email Notifications
 - HTML Report Generation
-- Prometheus Metrics
-- CloudWatch Integration
-- S3 Backup Storage
-- Terraform Integration
-- Ansible Automation
-- JSON/CSV Report Export
 ---
 # 🛠️ Prerequisites
 - Ubuntu/Linux
