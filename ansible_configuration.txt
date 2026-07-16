@@ -24,3 +24,11 @@ Ansible Server
 ssh ubuntu@172.31.18.187
 
 It should login without asking a password
+
+
+------------------------------------------
+Using Ansible adhoc command, creating a file on target server from ansible server 
+---------------------------------------------
+ssh to ansible server (exit)
+//creates empty file in target server
+ansible -i inventory all -m "shell" -a "touch testansible"
