@@ -32,3 +32,19 @@ Using Ansible adhoc command, creating a file on target server from ansible serve
 ssh to ansible server (exit)
 //creates empty file in target server
 ansible -i inventory all -m "shell" -a "touch testansible"
+
+Refer below docs for modules and args used in adhoc commands 
+https://docs.ansible.com/projects/ansible/latest/collections/ansible/builtin/index.html#description
+
+Scenario 1: Configure and run playbooks on 2 different set of servers (webservers, dbservers)
+Add groups in Inventory file 
+---------------
+[webservers]  |
+<ip_address>  |
+[dbservers]   |
+<ip_address]  |
+---------------
+ansible -i inventory dbservers -m "shell" -a "touch testansible"   // configures changes to dbservers
+
+
+
